@@ -1,0 +1,42 @@
+@import "../../common/sass";
+
+.Toggle-container{
+  @include t();
+  display: flex;
+  .Toggle-sider{
+    @include t(90px,100%);
+    background: #0A0B10;
+    @include fontd("PingFangSC-Medium",20px,#424759,0);
+    position: relative;
+    .Toggle-tabs{
+      cursor: pointer;
+      @include t(100%,70px);
+      margin-top: 10px;
+      @include flex_center();
+      transition: all .3s ease;
+      &.active{
+        background: #222328;
+        color: #4887FA;
+        border-right: 4px solid #4887FA;
+      }
+    }
+    .Toggle-back{
+      @include left-right;
+      bottom:20px;
+      cursor: pointer;
+      @include t(100%,70px);
+      @include flex_center();
+      transition: all .3s ease;
+      &:hover{
+        background: #222328;
+      }
+    }
+  }
+  .Toggle-content{
+    flex: 1;
+    background: #222228;
+    .Toggle-case{
+      @include t();
+    }
+  }
+}

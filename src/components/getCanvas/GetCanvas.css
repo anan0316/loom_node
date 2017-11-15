@@ -1,0 +1,59 @@
+.GetCanvas-container {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto; }
+  .GetCanvas-container video {
+    width: 100%;
+    height: 100%; }
+  .GetCanvas-container .GetCanvas-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto; }
+    .GetCanvas-container .GetCanvas-mask button {
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background: #16171D;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
+      border-radius: 10px;
+      font-family: "PingFangSC-Medium";
+      font-size: 16px;
+      color: #F0F0F0;
+      letter-spacing: 0;
+      position: absolute; }
+      .GetCanvas-container .GetCanvas-mask button.GetCanvas-update {
+        top: 22px;
+        left: 22px;
+        width: 120px;
+        height: 50px; }
+        .GetCanvas-container .GetCanvas-mask button.GetCanvas-update i {
+          color: #4887FA;
+          margin-right: 20px; }
+      .GetCanvas-container .GetCanvas-mask button.GetCanvas-Photograph {
+        top: 0;
+        bottom: 0;
+        right: 22px;
+        margin: auto;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        border: 10px solid #32353E; }
+        .GetCanvas-container .GetCanvas-mask button.GetCanvas-Photograph i {
+          font-size: 30px;
+          color: #4887FA; }
+      .GetCanvas-container .GetCanvas-mask button.GetCanvas-end {
+        right: 22px;
+        bottom: 22px;
+        width: 88px;
+        height: 50px; }

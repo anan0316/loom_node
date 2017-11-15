@@ -1,0 +1,78 @@
+@import "../../common/sass";
+
+.ChooseScore-container{
+  @include t();
+  padding: 30px 15px;
+  background: #16171D;
+  box-shadow: -2px 0 4px 0 rgba(0,0,0,0.30);
+  display: flex;
+  flex-direction: column;
+  .ChooseScore-header{
+    @include t(100%,40px);
+    background: rgba(255,255,255,.04);
+    border-radius: 30px;
+    @include fontd("PingFangSC-Medium",14px,#B4B4B4,0);
+    @include flex_center(space-between,center);
+    padding: 0 20px;
+    .ChooseScore-header-left{
+      display: flex;
+      p{
+        margin-right: 22px;
+      }
+    }
+  }
+  .ChooseScore-score{
+    flex: 1;
+    @include flex_center();
+    flex-direction: column;
+    @include fontd("PingFangSC-Medium",32px,#424759,0);
+    ul{
+      @include t(100%,160px);
+      @include flex_center(space-around,center);
+      margin-bottom: 90px;
+      li{
+        cursor: pointer;
+        @include c(160px);
+        background: #32353E;
+        @include flex_center();
+        @include fontd("PingFangSC-Medium",48px,#A1A9C3,0);
+        transition: all .3s ease;
+        &:hover{
+          background: #424759;
+          color: #FFFFFF;
+        }
+        &.active{
+          background: #424759;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+  .ChooseScore-flaw{
+    flex: 1;
+    @include flex_center();
+    margin:0 -15px;
+    ul{
+      @include t(100%,auto);
+      li{
+        cursor: pointer;
+        float: left;
+        margin:10px;
+        @include t(150px,80px);
+        background: #32353E;
+        border-radius: 8px;
+        @include flex_center();
+        @include fontd("PingFangSC-Medium",18px,#A1A9C3,0);
+        transition: all .3s ease;
+        &:hover{
+          background: #414759;
+          color: #FFFFFF;
+        }
+        &.active{
+          background: #414759;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}

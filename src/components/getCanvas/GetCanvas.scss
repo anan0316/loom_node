@@ -1,0 +1,49 @@
+@import "../../common/sass";
+
+.GetCanvas-container{
+  @include t();
+  background: #000000;
+  @include fixed;
+  video{
+    @include t(100%,100%);
+  }
+  .GetCanvas-mask{
+    @include t();
+    @include fixed;
+    button{
+      cursor: pointer;
+      outline: none;
+      border:none;
+      background: #16171D;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24);
+      border-radius: 10px;
+      @include fontd("PingFangSC-Medium",16px,#F0F0F0,0);
+      position: absolute;
+      &.GetCanvas-update{
+        top:22px;
+        left:22px;
+        @include t(120px,50px);
+        i{
+          color: #4887FA;
+          margin-right: 20px;
+        }
+      }
+      &.GetCanvas-Photograph{
+        top:0;
+        bottom:0;
+        right:22px;
+        margin: auto;
+        @include c(88px);
+        border: 10px solid #32353E;
+        i{
+          @include font(30px,#4887FA);
+        }
+      }
+      &.GetCanvas-end{
+        right:22px;
+        bottom: 22px;
+        @include t(88px,50px);
+      }
+    }
+  }
+}

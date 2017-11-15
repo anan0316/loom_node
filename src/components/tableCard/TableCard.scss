@@ -1,0 +1,132 @@
+@import "../../common/sass";
+
+.TableCard-content-table{
+  @include t();
+  padding: .15rem .1rem;
+  @include flex_center(flex-start,center);
+  flex-direction: column;
+  .TableCard-table{
+    @include t(100%,6rem);
+    background: url("../../images/bg.png") center/cover no-repeat;
+    padding: 0 .3rem .3rem;
+    display: flex;
+    flex-direction: column;
+    .TableCard-table-header{
+      @include t(100%,.75rem);
+      display: flex;
+      justify-content: space-between;
+      .table-header-left{
+        @include t(auto,100%);
+        display: flex;
+        align-items: center;
+        @include fontd("PingFangSC-Medium",.32rem,#000000,0);
+        img{
+          display: block;
+          @include t(1rem,auto);
+          margin-right: .2rem;
+        }
+      }
+      .table-header-right{
+        @include t(auto,100%);
+        @include fontd("PingFangSC-Medium",.18rem,#000000,0);
+        display: flex;
+        span{
+          display: block;
+          @include t(auto,100%);
+          @include flex_center();
+          margin:0 .05rem;
+        }
+      }
+    }
+    .TableCard-table-tabs{
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      .table1,.table3{
+        @include t(30%,100%);
+        border: 2px solid #1D1D1D;
+        @include fontd("PingFangSC-Medium",.2rem,#111111,0);
+        &:nth-child(3){
+          width: 35%;
+          tbody{
+            tr{
+              th{
+                width:33.33%;
+              }
+              td{
+                font-size: .36rem;
+              }
+            }
+          }
+        }
+        tbody{
+          tr{
+            th{
+              width: 50%;
+            }
+            td{
+              input,textarea{
+                font-size: .18rem;
+                @include t();
+                border:0;
+                outline: none;
+                background: transparent;
+                padding:0;
+                margin:0;
+                @include fontd("PingFangSC-Medium",.18rem,#111111,0);
+              }
+              input{
+                text-align: center;
+              }
+              textarea{
+                resize: none;
+                padding: .1rem;
+              }
+            }
+          }
+        }
+      }
+      .TableCard-table-tab{
+        @include t(30%,100%);
+        border: 2px solid #1D1D1D;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .TableCard-table-little{
+          width: 33.33%;
+          @include fontd("PingFangSC-Medium",.2rem,#111111,0);
+          span{
+            display: block;
+            @include t(100%,50%);
+            @include flex_center();
+            border:1px solid #000000;
+            border-right:0;
+            &:nth-child(1){
+              font-weight: bold;
+              border-top: 0;
+              border-bottom: 0;
+            }
+            &:nth-child(2){
+              font-size: .18rem;
+            }
+          }
+          &:nth-child(3n+1) span{
+            border-left: 0;
+          }
+          &:nth-last-child(4) ~ .TableCard-table-little span:nth-child(2){
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .TableCard-button{
+    cursor: pointer;
+    @include t(2.8rem,.6rem);
+    margin-top:.5rem;
+    background: #4887FA;
+    border-radius: .02rem;
+    @include flex_center();
+    @include fontd("PingFangSC-Medium",.2rem,#ffffff,0);
+  }
+}

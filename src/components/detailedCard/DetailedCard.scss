@@ -1,0 +1,107 @@
+@import "../../common/sass";
+
+.DetailedCard-content-detailed {
+  @include t();
+  display: flex;
+  .DetailedCard-detailed {
+    flex: 1;
+    padding: 0 .1rem;
+    display: flex;
+    flex-direction: column;
+    .DetailedCard-detailed-header {
+      @include t(100%, 1.4rem);
+      padding: 0 .6rem .05rem 0;
+      ul {
+        @include t(100%, .75rem);
+        @include flex_center(space-around, center);
+        li {
+          @include t();
+          @include flex_center();
+          @include fontd("PingFangSC-Medium", .14rem, #A7AABF, 0);
+        }
+      }
+      .DetailedCard-detailed-insert {
+        cursor: pointer;
+        @include t(100%, .6rem);
+        background: rgba(255, 255, 255, .16);
+        @include flex_center();
+        @include fontd("PingFangSC-Medium", .2rem, #A7AABF, 0);
+        i {
+          margin-right: .1rem;
+        }
+      }
+    }
+    .DetailedCard-detailed-content {
+      @include t(100%, auto);
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .Detailed-container {
+        @include t(100%, auto);
+        li {
+          @include t(100%, .6rem);
+          display: flex;
+          margin-bottom: 5px;
+          @include fontd("PingFangSC-Medium", .18rem, #FFFFFF, 0);
+          &.active .Detailed-left {
+            background: #363740;
+          }
+          &.active .Detailed-delete {
+            opacity: 1;
+          }
+          .Detailed-left {
+            cursor: pointer;
+            flex: 1;
+            @include flex_center(space-around, center);
+            background: rgba(255, 255, 255, .04);
+            transition: all .3s ease;
+            &:hover {
+              background: #363740;
+            }
+            span {
+              display: block;
+              @include t();
+              @include flex_center();
+              &:first-child {
+                color: #73747C;
+              }
+            }
+          }
+          .Detailed-delete {
+            cursor: pointer;
+            opacity: 0;
+            @include t(.6rem, 100%);
+            @include flex_center();
+            transition: all .3s ease;
+            i {
+              display: block;
+              @include s(.44rem);
+              background: #363840;
+              @include flex_center();
+            }
+          }
+          //img{
+          //  position: fixed;
+          //  right: .25rem;
+          //  top:.75rem;
+          //  display: block;
+          //  @include t(200px,160px);
+          //}
+        }
+      }
+    }
+  }
+  .DetailedCard-canvas{
+    @include t(2.05rem,100%);
+    @include flex_center(flex-start,center);
+    flex-direction: column;
+    line-height: .75rem;
+    @include fontd("PingFangSC-Medium", .14rem, #A7AABF, 0);
+    img{
+      display: block;
+      @include t(2rem,1.6rem);
+      background: red;
+    }
+  }
+}

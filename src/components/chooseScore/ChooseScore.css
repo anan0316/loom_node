@@ -1,0 +1,93 @@
+.ChooseScore-container {
+  width: 100%;
+  height: 100%;
+  padding: 30px 15px;
+  background: #16171D;
+  box-shadow: -2px 0 4px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column; }
+  .ChooseScore-container .ChooseScore-header {
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 30px;
+    font-family: "PingFangSC-Medium";
+    font-size: 14px;
+    color: #B4B4B4;
+    letter-spacing: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; }
+    .ChooseScore-container .ChooseScore-header .ChooseScore-header-left {
+      display: flex; }
+      .ChooseScore-container .ChooseScore-header .ChooseScore-header-left p {
+        margin-right: 22px; }
+  .ChooseScore-container .ChooseScore-score {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "PingFangSC-Medium";
+    font-size: 32px;
+    color: #424759;
+    letter-spacing: 0; }
+    .ChooseScore-container .ChooseScore-score ul {
+      width: 100%;
+      height: 160px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 90px; }
+      .ChooseScore-container .ChooseScore-score ul li {
+        cursor: pointer;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: #32353E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "PingFangSC-Medium";
+        font-size: 48px;
+        color: #A1A9C3;
+        letter-spacing: 0;
+        transition: all .3s ease; }
+        .ChooseScore-container .ChooseScore-score ul li:hover {
+          background: #424759;
+          color: #FFFFFF; }
+        .ChooseScore-container .ChooseScore-score ul li.active {
+          background: #424759;
+          color: #FFFFFF; }
+  .ChooseScore-container .ChooseScore-flaw {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -15px; }
+    .ChooseScore-container .ChooseScore-flaw ul {
+      width: 100%;
+      height: auto; }
+      .ChooseScore-container .ChooseScore-flaw ul li {
+        cursor: pointer;
+        float: left;
+        margin: 10px;
+        width: 150px;
+        height: 80px;
+        background: #32353E;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "PingFangSC-Medium";
+        font-size: 18px;
+        color: #A1A9C3;
+        letter-spacing: 0;
+        transition: all .3s ease; }
+        .ChooseScore-container .ChooseScore-flaw ul li:hover {
+          background: #414759;
+          color: #FFFFFF; }
+        .ChooseScore-container .ChooseScore-flaw ul li.active {
+          background: #414759;
+          color: #FFFFFF; }

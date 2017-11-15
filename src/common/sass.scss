@@ -1,0 +1,84 @@
+//flex居中
+@mixin flex_center($h:center,$w:center){
+  display: flex;
+  justify-content: $h;
+  align-items: $w;
+}
+//flex垂直居中
+@mixin flex_center_h($h:center){
+  display: flex;
+  flex-direction: column;
+  align-items: $h;
+}
+//定位居中
+@mixin position_center{
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  margin:auto;
+}
+//定位左右居中
+@mixin left-right{
+  position: absolute;
+  left: 0;
+  right:0;
+  margin:auto;
+}
+//定位上下居中
+@mixin top-bottom{
+  position: absolute;
+  top: 0;
+  bottom:0;
+  margin:auto;
+}
+// 固定居中定位
+@mixin fixed{
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  margin:auto;
+}
+// 固定上下居中定位
+@mixin fixed-top-bottom{
+  position: fixed;
+  top:0;
+  bottom:0;
+  margin:auto;
+}
+// 固定左右居中定位
+@mixin fixed-left-right{
+  position: fixed;
+  left:0;
+  right:0;
+  margin:auto;
+}
+//矩形
+@mixin t($w:100%,$h:100%){
+  width: $w;
+  height: $h;
+}
+//正方形
+@mixin s($l:100%){
+  width: $l;
+  height: $l;
+}
+//圆形
+@mixin c($l){
+  @include s($l);
+  border-radius: 50%;
+}
+//字体
+@mixin font($size,$color){
+  font-size: $size;
+  color: $color;
+}
+@mixin fontd($f,$s,$c,$l){
+  font-family: $f;
+  font-size: $s;
+  color: $c;
+  letter-spacing: $l;
+}

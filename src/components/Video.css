@@ -1,0 +1,108 @@
+.video{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.video .video-up{
+    width: 50%;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px dashed lightgray;
+}
+.video .video-up button{
+    width: 150px;
+    height: 50px;
+    background: lightskyblue;
+    outline: none;
+    border:0;
+    border-radius: 10px;
+    font-size: 24px;
+    color: #333333;
+    margin-top: 30px;
+}
+.video .video-right{
+    width: 50%;
+    height: 800px;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.video .video-right .video-scroll{
+    width: 100%;
+    height: 100%;
+}
+
+.video .video-right .video-scroll .video-down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:15px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+}
+
+.video .video-right .video-scroll .video-down img{
+    display: block;
+    width: 200px;
+    height: 150px;
+}
+
+canvas{
+    display: none;
+}
+
+.video .video-right .video-scroll .video-down .video-data{
+    width: 50%;
+    height: auto;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:30px;
+    box-sizing: border-box;
+    border-left: 1px solid gray;
+}
+.video .video-right .video-scroll .video-down .video-data .wh{
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+.video .video-right .video-scroll .video-down .video-data .wh p{
+    font-size: 20px;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.video .video-right .video-scroll .video-down .video-data .wh p:first-child{
+    margin-right: 30px;
+}
+
+.video .video-right .video-scroll .video-down .video-data .wh p em{
+    font-style: normal;
+    color: #000000;
+}
+
+.video .video-right .video-scroll .video-down .video-data .wh p span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin:0 10px;
+    border-bottom: 1px solid #000000;
+}
+
+.video .video-right .video-scroll .video-down .video-data .time{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #999999;
+}

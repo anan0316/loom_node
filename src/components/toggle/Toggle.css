@@ -1,0 +1,47 @@
+.Toggle-container {
+  width: 100%;
+  height: 100%;
+  display: flex; }
+  .Toggle-container .Toggle-sider {
+    width: 90px;
+    height: 100%;
+    background: #0A0B10;
+    font-family: "PingFangSC-Medium";
+    font-size: 20px;
+    color: #424759;
+    letter-spacing: 0;
+    position: relative; }
+    .Toggle-container .Toggle-sider .Toggle-tabs {
+      cursor: pointer;
+      width: 100%;
+      height: 70px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all .3s ease; }
+      .Toggle-container .Toggle-sider .Toggle-tabs.active {
+        background: #222328;
+        color: #4887FA;
+        border-right: 4px solid #4887FA; }
+    .Toggle-container .Toggle-sider .Toggle-back {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 20px;
+      cursor: pointer;
+      width: 100%;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all .3s ease; }
+      .Toggle-container .Toggle-sider .Toggle-back:hover {
+        background: #222328; }
+  .Toggle-container .Toggle-content {
+    flex: 1;
+    background: #222228; }
+    .Toggle-container .Toggle-content .Toggle-case {
+      width: 100%;
+      height: 100%; }

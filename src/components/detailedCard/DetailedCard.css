@@ -1,0 +1,118 @@
+.DetailedCard-content-detailed {
+  width: 100%;
+  height: 100%;
+  display: flex; }
+  .DetailedCard-content-detailed .DetailedCard-detailed {
+    flex: 1;
+    padding: 0 .1rem;
+    display: flex;
+    flex-direction: column; }
+    .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-header {
+      width: 100%;
+      height: 1.4rem;
+      padding: 0 .6rem .05rem 0; }
+      .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-header ul {
+        width: 100%;
+        height: 0.75rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-header ul li {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "PingFangSC-Medium";
+          font-size: 0.14rem;
+          color: #A7AABF;
+          letter-spacing: 0; }
+      .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-header .DetailedCard-detailed-insert {
+        cursor: pointer;
+        width: 100%;
+        height: 0.6rem;
+        background: rgba(255, 255, 255, 0.16);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "PingFangSC-Medium";
+        font-size: 0.2rem;
+        color: #A7AABF;
+        letter-spacing: 0; }
+        .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-header .DetailedCard-detailed-insert i {
+          margin-right: .1rem; }
+    .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-content {
+      width: 100%;
+      height: auto;
+      overflow-y: scroll; }
+      .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-content::-webkit-scrollbar {
+        display: none; }
+      .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-content .Detailed-container {
+        width: 100%;
+        height: auto; }
+        .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-content .Detailed-container li {
+          width: 100%;
+          height: 0.6rem;
+          display: flex;
+          margin-bottom: 5px;
+          font-family: "PingFangSC-Medium";
+          font-size: 0.18rem;
+          color: #FFFFFF;
+          letter-spacing: 0; }
+          .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-content .Detailed-container li.active .Detailed-left {
+            background: #363740; }
+          .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-content .Detailed-container li.active .Detailed-delete {
+            opacity: 1; }
+          .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-content .Detailed-container li .Detailed-left {
+            cursor: pointer;
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.04);
+            transition: all .3s ease; }
+            .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-content .Detailed-container li .Detailed-left:hover {
+              background: #363740; }
+            .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-content .Detailed-container li .Detailed-left span {
+              display: block;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-content .Detailed-container li .Detailed-left span:first-child {
+                color: #73747C; }
+          .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-content .Detailed-container li .Detailed-delete {
+            cursor: pointer;
+            opacity: 0;
+            width: 0.6rem;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .3s ease; }
+            .DetailedCard-content-detailed .DetailedCard-detailed .DetailedCard-detailed-content .Detailed-container li .Detailed-delete i {
+              display: block;
+              width: 0.44rem;
+              height: 0.44rem;
+              background: #363840;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+  .DetailedCard-content-detailed .DetailedCard-canvas {
+    width: 2.05rem;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    line-height: .75rem;
+    font-family: "PingFangSC-Medium";
+    font-size: 0.14rem;
+    color: #A7AABF;
+    letter-spacing: 0; }
+    .DetailedCard-content-detailed .DetailedCard-canvas img {
+      display: block;
+      width: 2rem;
+      height: 1.6rem;
+      background: red; }

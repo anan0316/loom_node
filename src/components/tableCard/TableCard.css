@@ -1,0 +1,134 @@
+.TableCard-content-table {
+  width: 100%;
+  height: 100%;
+  padding: .15rem .1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; }
+  .TableCard-content-table .TableCard-table {
+    width: 100%;
+    height: 6rem;
+    background: url("../../images/bg.png") center/cover no-repeat;
+    padding: 0 .3rem .3rem;
+    display: flex;
+    flex-direction: column; }
+    .TableCard-content-table .TableCard-table .TableCard-table-header {
+      width: 100%;
+      height: 0.75rem;
+      display: flex;
+      justify-content: space-between; }
+      .TableCard-content-table .TableCard-table .TableCard-table-header .table-header-left {
+        width: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-family: "PingFangSC-Medium";
+        font-size: 0.32rem;
+        color: #000000;
+        letter-spacing: 0; }
+        .TableCard-content-table .TableCard-table .TableCard-table-header .table-header-left img {
+          display: block;
+          width: 1rem;
+          height: auto;
+          margin-right: .2rem; }
+      .TableCard-content-table .TableCard-table .TableCard-table-header .table-header-right {
+        width: auto;
+        height: 100%;
+        font-family: "PingFangSC-Medium";
+        font-size: 0.18rem;
+        color: #000000;
+        letter-spacing: 0;
+        display: flex; }
+        .TableCard-content-table .TableCard-table .TableCard-table-header .table-header-right span {
+          display: block;
+          width: auto;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 .05rem; }
+    .TableCard-content-table .TableCard-table .TableCard-table-tabs {
+      flex: 1;
+      display: flex;
+      justify-content: space-between; }
+      .TableCard-content-table .TableCard-table .TableCard-table-tabs .table1, .TableCard-content-table .TableCard-table .TableCard-table-tabs .table3 {
+        width: 30%;
+        height: 100%;
+        border: 2px solid #1D1D1D;
+        font-family: "PingFangSC-Medium";
+        font-size: 0.2rem;
+        color: #111111;
+        letter-spacing: 0; }
+        .TableCard-content-table .TableCard-table .TableCard-table-tabs .table1:nth-child(3), .TableCard-content-table .TableCard-table .TableCard-table-tabs .table3:nth-child(3) {
+          width: 35%; }
+          .TableCard-content-table .TableCard-table .TableCard-table-tabs .table1:nth-child(3) tbody tr th, .TableCard-content-table .TableCard-table .TableCard-table-tabs .table3:nth-child(3) tbody tr th {
+            width: 33.33%; }
+          .TableCard-content-table .TableCard-table .TableCard-table-tabs .table1:nth-child(3) tbody tr td, .TableCard-content-table .TableCard-table .TableCard-table-tabs .table3:nth-child(3) tbody tr td {
+            font-size: .36rem; }
+        .TableCard-content-table .TableCard-table .TableCard-table-tabs .table1 tbody tr th, .TableCard-content-table .TableCard-table .TableCard-table-tabs .table3 tbody tr th {
+          width: 50%; }
+        .TableCard-content-table .TableCard-table .TableCard-table-tabs .table1 tbody tr td input, .TableCard-content-table .TableCard-table .TableCard-table-tabs .table1 tbody tr td textarea, .TableCard-content-table .TableCard-table .TableCard-table-tabs .table3 tbody tr td input, .TableCard-content-table .TableCard-table .TableCard-table-tabs .table3 tbody tr td textarea {
+          font-size: .18rem;
+          width: 100%;
+          height: 100%;
+          border: 0;
+          outline: none;
+          background: transparent;
+          padding: 0;
+          margin: 0;
+          font-family: "PingFangSC-Medium";
+          font-size: 0.18rem;
+          color: #111111;
+          letter-spacing: 0; }
+        .TableCard-content-table .TableCard-table .TableCard-table-tabs .table1 tbody tr td input, .TableCard-content-table .TableCard-table .TableCard-table-tabs .table3 tbody tr td input {
+          text-align: center; }
+        .TableCard-content-table .TableCard-table .TableCard-table-tabs .table1 tbody tr td textarea, .TableCard-content-table .TableCard-table .TableCard-table-tabs .table3 tbody tr td textarea {
+          resize: none;
+          padding: .1rem; }
+      .TableCard-content-table .TableCard-table .TableCard-table-tabs .TableCard-table-tab {
+        width: 30%;
+        height: 100%;
+        border: 2px solid #1D1D1D;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; }
+        .TableCard-content-table .TableCard-table .TableCard-table-tabs .TableCard-table-tab .TableCard-table-little {
+          width: 33.33%;
+          font-family: "PingFangSC-Medium";
+          font-size: 0.2rem;
+          color: #111111;
+          letter-spacing: 0; }
+          .TableCard-content-table .TableCard-table .TableCard-table-tabs .TableCard-table-tab .TableCard-table-little span {
+            display: block;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000000;
+            border-right: 0; }
+            .TableCard-content-table .TableCard-table .TableCard-table-tabs .TableCard-table-tab .TableCard-table-little span:nth-child(1) {
+              font-weight: bold;
+              border-top: 0;
+              border-bottom: 0; }
+            .TableCard-content-table .TableCard-table .TableCard-table-tabs .TableCard-table-tab .TableCard-table-little span:nth-child(2) {
+              font-size: .18rem; }
+          .TableCard-content-table .TableCard-table .TableCard-table-tabs .TableCard-table-tab .TableCard-table-little:nth-child(3n+1) span {
+            border-left: 0; }
+          .TableCard-content-table .TableCard-table .TableCard-table-tabs .TableCard-table-tab .TableCard-table-little:nth-last-child(4) ~ .TableCard-table-little span:nth-child(2) {
+            border-bottom: 0; }
+  .TableCard-content-table .TableCard-button {
+    cursor: pointer;
+    width: 2.8rem;
+    height: 0.6rem;
+    margin-top: .5rem;
+    background: #4887FA;
+    border-radius: .02rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "PingFangSC-Medium";
+    font-size: 0.2rem;
+    color: #ffffff;
+    letter-spacing: 0; }
