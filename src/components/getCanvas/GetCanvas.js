@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import "./GetCanvas.css";
 import $ from "jquery";
 
-// let mediaStreamTrack;
 let video;
 
 class GetCanvas extends Component {
@@ -20,11 +19,10 @@ class GetCanvas extends Component {
         // 打开设备摄像头
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             navigator.mediaDevices.getUserMedia({
+
                 video: true,
                 audio: true
             }).then(function (stream) {
-
-                // mediaStreamTrack = typeof stream.stop === 'function' ? stream : stream.getTracks()[1];
 
                 // 获取摄像的src
                 video.src = (window.URL || window.webkitURL).createObjectURL(stream);

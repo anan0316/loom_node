@@ -45,3 +45,6 @@
     .Toggle-container .Toggle-content .Toggle-case {
       width: 100%;
       height: 100%; }
+  @media print {
+    .Toggle-container .hidden {
+      display: none; } }

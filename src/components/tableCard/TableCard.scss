@@ -11,6 +11,7 @@
     padding: 0 .3rem .3rem;
     display: flex;
     flex-direction: column;
+    position: relative;
     .TableCard-table-header{
       @include t(100%,.75rem);
       display: flex;
@@ -46,7 +47,7 @@
         @include t(30%,100%);
         border: 2px solid #1D1D1D;
         @include fontd("PingFangSC-Medium",.2rem,#111111,0);
-        &:nth-child(3){
+        &:last-of-type{
           width: 35%;
           tbody{
             tr{
@@ -119,6 +120,10 @@
         }
       }
     }
+    canvas{
+      @include t();
+      @include position_center;
+    }
   }
   .TableCard-button{
     cursor: pointer;
@@ -128,5 +133,13 @@
     border-radius: .02rem;
     @include flex_center();
     @include fontd("PingFangSC-Medium",.2rem,#ffffff,0);
+  }
+  #status{
+    display: none;
+  }
+  @media print {
+    .hidden{
+      display: none;
+    }
   }
 }

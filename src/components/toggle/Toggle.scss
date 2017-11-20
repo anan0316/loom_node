@@ -39,4 +39,9 @@
       @include t();
     }
   }
+  @media print {
+    .hidden{
+      display: none;
+    }
+  }
 }

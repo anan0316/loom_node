@@ -11,7 +11,7 @@ class ChooseScore extends Component {
         super();
         this.state = {
             currentClothId:"",
-            chooseScore: "",
+            chooseFlaw: "",
             canvasT: "",
             canvasUrl: "",
             flawCoordinate: {},
@@ -43,15 +43,15 @@ class ChooseScore extends Component {
             })
         }
         // 获取当前瑕疵位置信息
-        // fetch("/cloth/location")
-        //     .then(res => res.json())
-        //     .then(r => {
-        //         if (r.message === "成功") {
-        //             self.setState({
-        //                 flawCoordinate:r.date
-        //             })
-        //         }
-        //     });
+        fetch("/cloth/location")
+            .then(res => res.json())
+            .then(r => {
+                if (r.message === "成功") {
+                    self.setState({
+                        flawCoordinate:r.date
+                    })
+                }
+            });
 
         // 请求瑕疵名称
         fetch("/defects/init").then(res => res.json()).then(r => {
@@ -65,19 +65,13 @@ class ChooseScore extends Component {
         $(".ChooseScore-score ul li").click((e) => {
             $(".ChooseScore-score ul li").removeClass("active");
             $(e.target).addClass("active");
-            self.setState({
-                chooseScore: Math.abs(e.target.innerText).toString()
-            })
-        });
-        $(".ChooseScore-flaw ul").click((e) => {
-            $(".ChooseScore-flaw ul li").removeClass("active");
-            $(e.target).addClass("active");
+            console.log(self.state.canvasUrl);
             let bodyInfo = {
                 "clothId": self.state.currentClothId,
-                "nameId": e.target.getAttribute("data-id"),
-                "score": self.state.chooseScore,
-                "height": "1111122",
-                "width": "2222233",
+                "nameId": self.state.chooseFlaw,
+                "score": Math.abs(e.target.innerText).toString(),
+                "height": self.state.flawCoordinate ? self.state.flawCoordinate.height : 0,
+                "width": self.state.flawCoordinate ? self.state.flawCoordinate.width : 0,
                 "picStr": self.state.canvasUrl
             };
             // 提交一个瑕疵信息
@@ -93,6 +87,13 @@ class ChooseScore extends Component {
                 }
             });
         });
+        $(".ChooseScore-flaw ul").click((e) => {
+            $(".ChooseScore-flaw ul li").removeClass("active");
+            $(e.target).addClass("active");
+            self.setState({
+                chooseFlaw: e.target.getAttribute("data-id")
+            })
+        });
     }
 
     render() {
@@ -102,14 +103,14 @@ class ChooseScore extends Component {
             <div className="ChooseScore-container">
                 <div className="ChooseScore-header">
                     <div className="ChooseScore-header-left">
-                        <p>检测长度位置：{this.state.flawCoordinate ? this.state.flawCoordinate.width : null}米</p>
-                        <p>水平位置：{this.state.flawCoordinate ? this.state.flawCoordinate.height : null}米</p>
+                        <p>检测长度位置：{this.state.flawCoordinate ? this.state.flawCoordinate.width : 0}米</p>
+                        <p>水平位置：{this.state.flawCoordinate ? this.state.flawCoordinate.height : 0}米</p>
                     </div>
                     <div className="ChooseScore-header-right">
                         {this.state.canvasT}
                     </div>
                 </div>
-                <div className="ChooseScore-score" style={{"display": this.state.chooseScore === "" ? "flex" : "none"}}>
+                <div className="ChooseScore-score" style={{"display": this.state.chooseFlaw === "" ? "none" : "flex"}}>
                     <ul>
                         <li>-1</li>
                         <li>-2</li>
@@ -119,7 +120,7 @@ class ChooseScore extends Component {
                     </ul>
                     选择扣分值
                 </div>
-                <div className="ChooseScore-flaw" style={{"display": this.state.chooseScore === "" ? "none" : "flex"}}>
+                <div className="ChooseScore-flaw" style={{"display": this.state.chooseFlaw === "" ? "flex" : "none"}}>
                     <ul>
                         {flawNameArr}
                     </ul>
