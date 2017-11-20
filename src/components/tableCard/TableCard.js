@@ -102,7 +102,8 @@ class TableCard extends Component {
                 "actulLength": inputs[11].value,
                 "note": $("textarea")[0].value
             };
-            fetch("/cloth/form/print", {
+            fetch("http://192.168.199.11:8088/cloth/form/print", {
+                mode:"cors",
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -238,7 +239,9 @@ class TableCard extends Component {
     getFlaws() {
         let self = this;
         // 请求瑕疵名称
-        fetch("/defects/init").then(res => res.json()).then(r => {
+        fetch("http://192.168.199.11:8088/defects/init",{
+            mode: "cors"
+        }).then(res => res.json()).then(r => {
             if (r.message === "成功") {
                 self.setState({
                     flawsName: r.data.names

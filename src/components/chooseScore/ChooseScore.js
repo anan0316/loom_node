@@ -43,7 +43,9 @@ class ChooseScore extends Component {
             })
         }
         // 获取当前瑕疵位置信息
-        fetch("/cloth/location")
+        fetch("http://192.168.199.11:8088/cloth/location",{
+            mode: "cors"
+        })
             .then(res => res.json())
             .then(r => {
                 if (r.message === "成功") {
@@ -54,7 +56,9 @@ class ChooseScore extends Component {
             });
 
         // 请求瑕疵名称
-        fetch("/defects/init").then(res => res.json()).then(r => {
+        fetch("http://192.168.199.11:8088/defects/init",{
+            mode: "cors"
+        }).then(res => res.json()).then(r => {
             if (r.message === "成功") {
                 self.setState({
                     flawNames: r.data
@@ -75,7 +79,8 @@ class ChooseScore extends Component {
                 "picStr": self.state.canvasUrl
             };
             // 提交一个瑕疵信息
-            fetch("/defects/detail", {
+            fetch("http://192.168.199.11:8088/defects/detail", {
+                mode:"cors",
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

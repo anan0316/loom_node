@@ -38,7 +38,9 @@ class GetCanvas extends Component {
         });
         if(cloth.length === 0){
             // 请求新布匹初始化接口，获取clothId
-            fetch("/cloth/init")
+            fetch("http://192.168.199.11:8088/cloth/init",{
+                mode: "cors"
+            })
                 .then(res => res.json())
                 .then(r => {
                     if (r.message === "成功") {

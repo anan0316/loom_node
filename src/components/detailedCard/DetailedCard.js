@@ -32,7 +32,8 @@ class DetailedCard extends Component {
                     return v.id != $(e.target).parents("li")[0].getAttribute("data-id")
                 });
             }
-            fetch("/defects/detail/" + $(e.target).parents("li")[0].getAttribute("data-id"), {
+            fetch("http://192.168.199.11:8088/defects/detail/" + $(e.target).parents("li")[0].getAttribute("data-id"), {
+                mode: "cors",
                 method: "DELETE"
             })
                 .then(res => res.json())

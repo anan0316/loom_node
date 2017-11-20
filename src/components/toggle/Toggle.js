@@ -64,7 +64,8 @@ class Toggle extends Component {
         if (e.target.className === "Detailed-container") {
             return;
         } else if (e.target.className === "iconfont icon-guanbi" && $(e.target).parents("li")[0].className === "active") {
-            fetch("/defects/detail/" + $(e.target).parents("li")[0].getAttribute("data-id"), {
+            fetch("http://192.168.199.11:8088/defects/detail/" + $(e.target).parents("li")[0].getAttribute("data-id"), {
+                mode: "cors",
                 method: "DELETE"
             })
                 .then(res => res.json())
@@ -86,7 +87,9 @@ class Toggle extends Component {
     getDetails() {
         let self = this;
         // 请求查看某皮布的明细
-        fetch("/defects/all-details/" + self.props.match.params.clothId).then(res => res.json()).then(r => {
+        fetch("http://192.168.199.11:8088/defects/all-details/" + self.props.match.params.clothId,{
+            mode: "cors"
+        }).then(res => res.json()).then(r => {
             if (r.message === "成功") {
                 self.setState({
                     details: r.data
@@ -98,7 +101,9 @@ class Toggle extends Component {
 
     getTable() {
         let self = this;
-        fetch("/cloth/form/init/" + self.props.match.params.clothId)
+        fetch("http://192.168.199.11:8088/cloth/form/init/" + self.props.match.params.clothId,{
+            mode: "cors"
+        })
             .then(res => res.json())
             .then(r =>{
                 if(r.message === "成功"){
