@@ -16,9 +16,11 @@ class TableCard extends Component {
         this.cPrint = this.cPrint.bind(this);
         this.sendMessege = this.sendMessege.bind(this);
         this.getStatus = this.getStatus.bind(this);
+
     }
 
     componentDidMount() {
+
         let self = this;
         status = document.getElementById("status");
         if (window.localStorage.canvasTime) {
