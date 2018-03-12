@@ -28,9 +28,12 @@ class TableCard extends Component {
             self.setState({
                 canvasT: t.getFullYear() + "年" + (t.getMonth() + 1) + "月" + t.getDate() + "日"
             })
+
         }
         this.getFlaws();
         $(".TableCard-button").click(() => {
+
+
             // window.html2canvas($(".TableCard-table"), {
             //     onrendered: function (canvas) {
             //         //         // let url=canvas.toDataURL();
