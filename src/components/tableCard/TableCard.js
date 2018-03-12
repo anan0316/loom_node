@@ -24,6 +24,7 @@ class TableCard extends Component {
         let self = this;
         status = document.getElementById("status");
         if (window.localStorage.canvasTime) {
+
             t = new Date(window.localStorage.canvasTime);
             self.setState({
                 canvasT: t.getFullYear() + "年" + (t.getMonth() + 1) + "月" + t.getDate() + "日"
